@@ -48,10 +48,10 @@ export default function VideoCard({
   return (
     <article
       ref={cardRef}
-      className="relative h-screen w-full snap-start snap-always overflow-hidden bg-black lg:flex lg:items-center lg:justify-center lg:px-8"
+      className="relative h-[100dvh] w-full snap-start snap-always overflow-hidden bg-black sm:flex sm:items-center sm:justify-center sm:px-6 lg:px-8"
     >
-      <div className="relative h-full w-full lg:flex lg:h-[94vh] lg:max-h-[930px] lg:w-auto lg:items-end lg:justify-center lg:gap-5">
-        <div className="relative h-full w-full overflow-hidden bg-neutral-950 lg:aspect-[9/16] lg:h-full lg:w-auto lg:rounded-[28px] lg:border lg:border-white/10 lg:shadow-2xl">
+      <div className="relative h-full w-full sm:h-[94dvh] sm:max-h-[930px] sm:w-auto lg:flex lg:items-end lg:justify-center lg:gap-5">
+        <div className="relative h-full w-full overflow-hidden bg-neutral-950 sm:aspect-[9/16] sm:h-full sm:w-auto sm:rounded-[28px] sm:border sm:border-white/10 sm:shadow-2xl">
           <video
             ref={videoRef}
             src={video.videoUrl}

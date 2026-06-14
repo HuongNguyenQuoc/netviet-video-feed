@@ -12,7 +12,10 @@ export default function VideoFeed() {
   }, []);
 
   return (
-    <main className="h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory bg-black no-scrollbar">
+    <main
+      id="video-feed"
+      className="h-[100dvh] overflow-y-scroll scroll-smooth snap-y snap-mandatory bg-black no-scrollbar"
+    >
       <div className="h-full w-full">
         {videos.map((video) => {
           return (

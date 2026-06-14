@@ -1,6 +1,15 @@
+"use client";
+
 import { navItems } from "@/constants/navigation";
 
 export default function AppNavigation() {
+  const scrollToFirstVideo = () => {
+    document.getElementById("video-feed")?.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <nav className="hidden lg:fixed lg:left-0 lg:top-0 lg:z-50 lg:flex lg:h-screen lg:w-24 lg:flex-col lg:items-center lg:border-r lg:border-white/10 lg:bg-black/90 lg:py-8">
@@ -16,6 +25,7 @@ export default function AppNavigation() {
               <button
                 key={item.label}
                 type="button"
+                onClick={item.label === "Home" ? scrollToFirstVideo : undefined}
                 className={`flex flex-col items-center gap-1 text-xs transition hover:scale-105 ${
                   item.active ? "text-white" : "text-white/50"
                 }`}
@@ -37,6 +47,7 @@ export default function AppNavigation() {
             <button 
               key={item.label}
               type="button"
+              onClick={item.label === "Home" ? scrollToFirstVideo : undefined}
               className={`flex flex-col items-center gap-1 text-[11px] transition active:scale-95 ${
                 item.active ? "text-white" : "text-white/50"
               }`}
