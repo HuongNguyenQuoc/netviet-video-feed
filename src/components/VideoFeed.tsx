@@ -13,7 +13,7 @@ export default function VideoFeed() {
 
   return (
     <main className="h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory bg-black no-scrollbar">
-      <div className="mx-auto h-full w-full max-w-[480px] lg:max-w-[430px]">
+      <div className="h-full w-full">
         {videos.map((video) => {
           return (
             <VideoCard

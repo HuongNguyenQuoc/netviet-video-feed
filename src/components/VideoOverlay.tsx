@@ -22,7 +22,7 @@ export default function VideoOverlay({
         onClick={onToggleMuted}
         aria-label={isMuted ? "Unmute video" : "Mute video"}
         aria-pressed={!isMuted}
-        className="absolute right-4 top-4 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur transition active:scale-95"
+        className="absolute left-4 top-4 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur transition active:scale-95"
       >
         {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
       </button>

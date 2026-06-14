@@ -19,7 +19,7 @@ export default function ActionButtons({
   onToggleLike,
 }: ActionButtonProps) {
   return (
-    <div className="absolute bottom-28 right-4 z-30 flex flex-col items-center gap-5 sm:bottom-10 lg:bottom-8">
+    <div className="absolute bottom-24 right-4 z-30 flex flex-col items-center gap-5 lg:static lg:mb-2 lg:shrink-0">
       <button
         type="button"
         onClick={onToggleLike}
@@ -55,7 +55,7 @@ export default function ActionButtons({
         <span className="text-xs font-semibold text-white sm:hidden">
           {formatCount(commentsCount, true)}
         </span>
-        <span className="hidden text-xs font-semibold text-white lg:inline">
+        <span className="hidden text-xs font-semibold text-white sm:inline">
           {formatCount(commentsCount, false)}
         </span>
       </button>
@@ -72,7 +72,7 @@ export default function ActionButtons({
         <span className="text-xs font-semibold text-white sm:hidden">
           {formatCount(sharesCount, true)}
         </span>
-        <span className="hidden text-xs font-semibold text-white lg:inline">
+        <span className="hidden text-xs font-semibold text-white sm:inline">
           {formatCount(sharesCount, false)}
         </span>
       </button>

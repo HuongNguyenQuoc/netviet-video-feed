@@ -17,6 +17,7 @@ body {
 
 button {
   font: inherit;
+  cursor: pointer;
 }
 
 .no-scrollbar::-webkit-scrollbar {
