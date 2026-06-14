@@ -1,22 +1,4 @@
-import { Compass, Home, UserRound } from "lucide-react";
-
-const navItems = [
-  {
-    label: "Home",
-    icon: Home,
-    active: true,
-  },
-  {
-    label: "Discover",
-    icon: Compass,
-    active: false,
-  },
-  {
-    label: "Profile",
-    icon: UserRound,
-    active: false,
-  },
-];
+import { navItems } from "@/constants/navigation";
 
 export default function AppNavigation() {
   return (

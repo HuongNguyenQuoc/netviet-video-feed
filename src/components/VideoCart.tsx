@@ -4,6 +4,7 @@ import { Pause, Play } from "lucide-react";
 import { useCallback, useEffect, useState, useRef } from "react";
 import ActionButtons from "@/components/ActionButtons";
 import type { VideoItem } from "@/types/video";
+import { AUTO_PLAY_THRESHOLD, STATUS_ICON_DURATION_MS } from "@/constants/video";
 
 type VideoCardProps = {
   video: VideoItem;
@@ -29,7 +30,7 @@ export default function VideoCard({ video }: VideoCardProps) {
 
     statusTimerRef.current = setTimeout(() => {
       setShowStatusIcon(false);
-    }, 550);
+    }, STATUS_ICON_DURATION_MS);
   }, []);
 
   const playVideo = useCallback(async () => {
@@ -81,7 +82,7 @@ export default function VideoCard({ video }: VideoCardProps) {
       (entries) => {
         const entry = entries[0];
 
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.7) {
+        if (entry.isIntersecting && entry.intersectionRatio >= AUTO_PLAY_THRESHOLD) {
           void playVideo();
         } else {
           pauseVideo();
